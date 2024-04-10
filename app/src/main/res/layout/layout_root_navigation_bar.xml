@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <com.realgear.readable_bottom_bar.ReadableBottomBar
+            android:id="@+id/root_navigation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/navigation_bar_height"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            app:rbb_tabs="@menu/navigation_bar_tabs"
+            app:rbb_selectedTabType="text"
+            app:rbb_indicatorAppearance="round"
+            app:rbb_indicatorStyle="normal"
+            app:rbb_indicatorMargin="20dp"
+            app:rbb_indicatorHeight="4dp"
+            app:rbb_selectedIndex="0"
+            app:rbb_tabColor="#3E3E3E"
+            app:rbb_indicatorColor="#448AFF"
+            app:rbb_tabColorSelected="#448AFF"
+            app:rbb_textStyle="bold"
+            app:rbb_textSize="16sp"
+            app:rbb_iconSize="30dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textColor="@color/bg_gray"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

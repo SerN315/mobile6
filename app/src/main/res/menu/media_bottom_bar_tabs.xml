@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tab_lyrics"
+        android:icon="@drawable/ic_lyrics_24px"
+        android:title="LYRICS" />
+
+    <item
+        android:id="@+id/tab_queue"
+        android:icon="@drawable/ic_queue_24px"
+        android:title="UP NEXT" />
+
+    <item
+        android:id="@+id/tab_related"
+        android:icon="@drawable/ic_relate_24px"
+        android:title="RELATED" />
+
+</menu>

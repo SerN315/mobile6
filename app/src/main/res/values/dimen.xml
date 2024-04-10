@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="media_player_bar_height">76dp</dimen>
+    <dimen name="navigation_bar_height">54dp</dimen>
+
+    <dimen name="bottom_bar_peek_height">56dp</dimen>
+    <dimen name="bottom_bar_drag_handle_height">20dp</dimen>
+
+    <dimen name="item_library_song_art_size">50dp</dimen>
+
+    <dimen name="item_library_list_height">64dp</dimen>
+    <dimen name="item_library_grid_height">148dp</dimen>
+
+    <dimen name="item_library_song_padding">12dp</dimen>
+
+    <dimen name="font_size_md">14sp</dimen>
+    <dimen name="font_size_sm">12sp</dimen>
+
+    <dimen name="play_icon_size">74dp</dimen>
+    <dimen name="pause_icon_size">40dp</dimen>
+</resources>

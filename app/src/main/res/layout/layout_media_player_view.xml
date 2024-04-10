@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@+id/media_player_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/bg_gray"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/media_player_controls_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="30dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/bottom_bar_peek_height"
+        android:background="@color/bg_gray">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_header_container"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@null"
+                android:scaleType="center"
+                android:src="@drawable/ic_arrow_back_24px"
+                app:tint="#FFFFFF"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Now playing"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_back"
+                app:layout_constraintEnd_toStartOf="@id/btn_more"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_more"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@null"
+                android:scaleType="center"
+                android:src="@drawable/ic_more_24px"
+                app:tint="#FFFFFF"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_artist_art_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintTop_toBottomOf="@id/layout_header_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/layout_desc_container"
+            app:layout_constraintDimensionRatio="1:1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_desc_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            app:layout_constraintBottom_toTopOf="@id/layout_controls_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_favorite">
+
+                <TextView
+                    android:id="@+id/text_view_song_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Hope"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:maxLines="1"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_view_song_artist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="NF"
+                    android:maxLines="1"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:textColor="#939393"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_favorite"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@null"
+                android:scaleX="1.26"
+                android:scaleY="1.26"
+                android:src="@drawable/ic_favorite_24px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#FFFFFF" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_controls_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:clipToPadding="false"
+            android:clipChildren="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:clipToPadding="false"
+                android:clipChildren="false">
+
+                <SeekBar
+                    android:id="@+id/seek_bar_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:thumbOffset="3dp"
+                    android:thumbTint="#FFFFFF"
+                    android:progressTint="#FFFFFF"
+                    android:progressBackgroundTint="#888888"
+                    android:elevation="0dp"
+                    android:progress="0"
+                    android:max="100" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_view_song_current_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0:24"
+                        android:textColor="#C8C8C8"
+                        android:textSize="13sp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/text_view_song_max_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+                        android:text="5:04"
+                        android:textColor="#C8C8C8"
+                        android:textSize="13sp"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="8dp"
+                android:clipToPadding="false"
+                android:clipChildren="false" >
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/btn_repeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:elevation="0dp"
+                    android:shadowColor="#000000"
+                    android:outlineSpotShadowColor="#00000000"
+                    android:outlineAmbientShadowColor="#00000000"
+                    app:backgroundTint="@color/bg_gray"
+                    app:iconTint="@color/white"
+                    app:elevation="0dp"
+                    app:collapsedSize="40dp"
+                    app:icon="@drawable/ic_repeat_24px"
+                    app:iconSize="28dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_goneMarginLeft="0dp"
+                    app:layout_goneMarginBaseline="0dp"/>
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/btn_skip_previous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="0dp"
+                    android:shadowColor="#000000"
+                    android:outlineSpotShadowColor="#00000000"
+                    android:outlineAmbientShadowColor="#00000000"
+                    app:backgroundTint="@color/bg_gray"
+                    app:iconTint="@color/white"
+                    app:elevation="0dp"
+                    app:collapsedSize="40dp"
+                    app:icon="@drawable/ic_skip_previous_24px"
+                    app:iconSize="34dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btn_play_pause"
+                    app:layout_constraintStart_toEndOf="@+id/btn_repeat"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_play_pause"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:elevation="0dp"
+                    android:shadowColor="#000000"
+                    android:outlineSpotShadowColor="#00000000"
+                    android:outlineAmbientShadowColor="#00000000"
+                    android:src="@drawable/ic_pause_24px"
+                    android:scaleType="center"
+                    app:fabCustomSize="74dp"
+                    app:maxImageSize="74dp"
+                    app:fabSize="normal"
+                    app:backgroundTint="#DDDDDD"
+                    app:iconTint="#2E2E2E"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btn_skip_next"
+                    app:layout_constraintStart_toEndOf="@id/btn_skip_previous"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/btn_skip_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="0dp"
+                    android:shadowColor="#000000"
+                    android:outlineSpotShadowColor="#00000000"
+                    android:outlineAmbientShadowColor="#00000000"
+                    app:backgroundTint="@color/bg_gray"
+                    app:iconTint="@color/white"
+                    app:elevation="0dp"
+                    app:collapsedSize="40dp"
+                    app:icon="@drawable/ic_skip_next_24px"
+                    app:iconSize="34dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btn_play_pause"
+                    app:layout_constraintEnd_toStartOf="@id/btn_shuffle"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/btn_shuffle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:elevation="0dp"
+                    android:shadowColor="#000000"
+                    android:outlineSpotShadowColor="#00000000"
+                    android:outlineAmbientShadowColor="#00000000"
+                    app:backgroundTint="@color/bg_gray"
+                    app:iconTint="@color/white"
+                    app:elevation="0dp"
+                    app:collapsedSize="40dp"
+                    app:icon="@drawable/ic_shuffle_24px"
+                    app:iconSize="28dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_goneMarginLeft="0dp"
+                    app:layout_goneMarginBaseline="0dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/media_player_bottom_sheet_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.my.extensions.bottomsheet.CustomBottomSheetBehavior"
+        app:behavior_defaultState="collapsed"
+        app:behavior_peekHeight="@dimen/bottom_bar_peek_height">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="6dp"
+            style="@style/CustomCardViewStyle">
+
+            <include
+                layout="@layout/layout_media_player_bottom_view" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
