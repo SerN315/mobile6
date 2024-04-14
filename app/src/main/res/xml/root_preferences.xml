@@ -1,0 +1,51 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:title="@string/general_settings_header">
+        <!-- Danh sách nhạc đã lưu -->
+        <Preference
+            app:key="saved_music"
+            app:title="@string/saved_music_title"
+            app:summary="@string/saved_music_summary"/>
+
+        <!-- Đổi chủ đề sáng/tối -->
+        <SwitchPreferenceCompat
+            app:key="dark_mode"
+            app:title="@string/dark_mode_title"
+            app:summaryOff="@string/dark_mode_summary_off"
+            app:summaryOn="@string/dark_mode_summary_on"/>
+
+        <!-- Chỉnh chất lượng âm thanh -->
+        <ListPreference
+            app:key="sound_quality"
+            app:title="@string/sound_quality_title"
+            app:dialogTitle="@string/sound_quality_dialog_title"
+            app:entries="@array/sound_quality_options"
+            app:entryValues="@array/sound_quality_values"
+            app:defaultValue="medium"/>
+
+        <!-- Chỉnh cỡ chữ -->
+        <ListPreference
+            app:key="font_size"
+            app:title="@string/font_size_title"
+            app:dialogTitle="@string/font_size_dialog_title"
+            app:entries="@array/font_size_options"
+            app:entryValues="@array/font_size_values"
+            app:defaultValue="normal"/>
+
+        <!-- Cho phép thông báo -->
+        <SwitchPreferenceCompat
+            app:key="notifications"
+            app:title="@string/notifications_title"
+            app:summaryOff="@string/notifications_summary_off"
+            app:summaryOn="@string/notifications_summary_on"/>
+
+    </PreferenceCategory>
+
+    <!-- Thông tin ứng dụng -->
+    <PreferenceCategory app:title="@string/app_info_header">
+        <Preference
+            app:key="app_info"
+            app:title="@string/app_info_title"
+            app:summary="@string/app_info_summary"/>
+
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -17,6 +17,7 @@ import com.realgear.multislidinguppanel.MultiSlidingUpPanelLayout;
 import com.realgear.readable_bottom_bar.ReadableBottomBar;
 import com.my.samplemusicplayertest.R;
 
+
 public class RootNavigationBarPanel extends BasePanelView {
 
     private ViewPager2 rootViewPager;
@@ -81,6 +82,7 @@ public class RootNavigationBarPanel extends BasePanelView {
                     }
                 }
             }
+
 
             @Override
             public void onTabReselected(int i, @NonNull ReadableBottomBar.Tab tab) {
