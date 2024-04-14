@@ -1,4 +1,4 @@
-package com.example.musicplayerapp;
+package com.my.samplemusicplayertest.ui.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,17 +6,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.musicplayerapp.model.Song;
+
+import com.my.samplemusicplayertest.R;
+
 import java.util.List;
 
 public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
 
-    private List<Song> songs;
+    private List<Songs> songs;
     private Context context;
 
-    public SongAdapter(List<Song> songs) {
+    public SongAdapter(List<Songs> songs) {
         this.context = context;
         this.songs = songs;
     }
@@ -30,10 +33,10 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        final Song song = songs.get(position);
-        holder.tvTitle.setText(song.getTitle());
-        holder.tvArtist.setText(song.getArtist());
-        holder.ivSongImage.setImageResource(song.getImageResId());
+        final Songs songs = this.songs.get(position);
+        holder.tvTitle.setText(songs.getTitle());
+        holder.tvArtist.setText(songs.getArtistName());
+        holder.ivSongImage.setImageResource(songs.image());
     }
 
 
