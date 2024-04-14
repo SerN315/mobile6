@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "725594373954",
+    "project_id": "mobile-music-player-3dcfb",
+    "storage_bucket": "mobile-music-player-3dcfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725594373954:android:fbcc31260572fa7f55d2db",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9XTbSgJ19prOpKRL8srWsf9yQn7ocq3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725594373954:android:dede21e69232212455d2db",
+        "android_client_info": {
+          "package_name": "com.my.samplemusicplayertest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9XTbSgJ19prOpKRL8srWsf9yQn7ocq3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

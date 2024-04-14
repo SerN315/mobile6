@@ -47,6 +47,31 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/languages"
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="282dp"
+                android:layout_height="match_parent"
+                android:gravity="center|start"
+                android:text="Change Language"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="78dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_expand_24px"
+                app:srcCompat="@drawable/ic_expand_24px"
+                android:rotation="90"/>
+        </LinearLayout>
+
     </LinearLayout>
 
 
