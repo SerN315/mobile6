@@ -22,14 +22,14 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:text="Song Title" />
+            android:text="Song" />
 
         <TextView
             android:id="@+id/text_view_artist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
-            android:text="Artist Name" />
+            android:text="Artist" />
     </LinearLayout>
 
 </LinearLayout>
