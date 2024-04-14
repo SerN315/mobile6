@@ -1,12 +1,17 @@
 package com.my.samplemusicplayertest.views.panels;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.my.samplemusicplayertest.Login;
+import com.my.samplemusicplayertest.Register;
 import com.my.samplemusicplayertest.threads.UIThread;
 import com.my.samplemusicplayertest.ui.adapters.StateFragmentAdapter;
 import com.my.samplemusicplayertest.ui.fragments.FragmentHome;
@@ -33,6 +38,7 @@ public class RootNavigationBarPanel extends BasePanelView {
 
         getContext().setTheme(R.style.Theme_SampleMusicPlayerTest);
         LayoutInflater.from(getContext()).inflate(R.layout.layout_root_navigation_bar, this, true);
+
     }
 
     @Override
@@ -107,4 +113,5 @@ public class RootNavigationBarPanel extends BasePanelView {
             BackEventHandler.getInstance().addBackEvent(this.m_vPanelBackEvent);
         }
     }
+
 }

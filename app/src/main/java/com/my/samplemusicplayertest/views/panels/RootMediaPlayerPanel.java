@@ -1,6 +1,7 @@
 package com.my.samplemusicplayertest.views.panels;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.media.MediaMetadata;
@@ -9,7 +10,9 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 
@@ -17,6 +20,7 @@ import com.my.extensions.bottomsheet.CustomBottomSheetBehavior;
 import com.my.samplemusicplayertest.theme.AsyncPaletteBuilder;
 import com.my.samplemusicplayertest.theme.interfaces.PaletteStateListener;
 import com.my.samplemusicplayertest.threads.UIThread;
+import com.my.samplemusicplayertest.ui.adapters.Songs;
 import com.my.samplemusicplayertest.utils.BackEventHandler;
 import com.my.samplemusicplayertest.utils.ViewsUtil;
 import com.realgear.multislidinguppanel.BasePanelView;
@@ -31,7 +35,7 @@ public class RootMediaPlayerPanel extends BasePanelView implements PaletteStateL
 
     private MediaPlayerView mMediaPlayerView;
     private MediaPlayerBarView mMediaPlayerBarView;
-
+    private ImageView btnFavorite;
     private AsyncPaletteBuilder mAsyncPaletteBuilder;
 
     private View mParentView;
@@ -120,7 +124,35 @@ public class RootMediaPlayerPanel extends BasePanelView implements PaletteStateL
                 mMediaPlayerBarView.onSliding(alpha, MediaPlayerBarView.STATE_PARTIAL);
             }
         });
+//        btnFavorite = findViewById(R.id.btn_favorite);
+//        btnFavorite.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Store the user's favorite song
+//                storeFavoriteSong();
+//
+//                // Update the button's appearance
+//                btnFavorite.setBackgroundColor(Color.RED);
+//            }
+//        });
     }
+//    private void storeFavoriteSong() {
+//        // Implement the logic to store the user's favorite song
+//        Songs song = getFavoriteSong(); // Replace this with your own logic to retrieve the favorite song
+//        if (song != null) {
+//            SharedPreferences preferences = getContext().getSharedPreferences("Favorites", Context.MODE_PRIVATE);
+//            preferences.edit()
+//                    .putLong("favoriteSongId", song.getId())
+//                    .putString("favoriteSongTitle", song.getTitle())
+//                    .putLong("favoriteSongDuration", song.getDuration())
+//                    .putString("favoriteSongData", song.getData())
+//                    .putString("favoriteSongAlbumName", song.getAlbumName())
+//                    .putString("favoriteSongArtistName", song.getArtistName())
+//                    .putString("favoriteSongDisplayName", song.getDisplayName())
+//
+//                    .apply();
+//        }
+//    }
 
     @Override
     public void onPanelStateChanged(int panelSate) {

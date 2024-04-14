@@ -17,4 +17,28 @@
         app:layout_constraintVertical_bias="0.036"
         app:srcCompat="@drawable/iconoir_search"
         android:contentDescription="@string/seach" />
+
+    <ImageView
+        android:id="@+id/loginb"
+        android:layout_width="38dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/search"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars"
+        android:src ="@drawable/avatar_default"
+        android:contentDescription="@string/login" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="85dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/loginb"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

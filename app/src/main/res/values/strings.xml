@@ -10,4 +10,16 @@
     <string name="choose_your_prefered_language">Choose Your Prefered Language</string>
     <string name="french">French</string>
     <string name="seach">search</string>
+    <string name="change_language">Change Language</string>
+    <string name="decor">decor</string>
+    <string name="login_with_google">Login with Google</string>
+    <string name="email">Email</string>
+    <string name="login">LOGIN</string>
+    <string name="register">REGISTER</string>
+    <string name="username">Username</string>
+    <string name="not_first_time">Not First time ?</string>
+    <string name="password">Password</string>
+    <string name="signup">SignUp</string>
+    <string name="fisrt_time">Fisrt time?</string>
+    <string name="testing">testing</string>
 </resources>
