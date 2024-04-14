@@ -8,13 +8,15 @@ public class Song {
     private String artist;
     private String fileLink;
     private double songLength;
+    private int imageResId;
 
-    public Song(String id, String title, String artist, String fileLink, double songLength) {
+    public Song(String id, String title, String artist, String fileLink, double songLength, int imageResId) {
         this.id = id;
         this.title = title;
         this.artist = artist;
         this.fileLink = fileLink;
         this.songLength = songLength;
+        this.imageResId = imageResId;
     }
 
     public String getId() {
@@ -57,6 +59,13 @@ public class Song {
         this.songLength = songLength;
     }
 
+    public int getImageResId() {
+        return imageResId;
+    }
+
+    public void setImageResId(int imageResId) {
+        this.imageResId = imageResId;
+    }
 
 }
 
