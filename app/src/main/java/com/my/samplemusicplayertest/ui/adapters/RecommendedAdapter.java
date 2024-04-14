@@ -1,4 +1,4 @@
-package com.example.musicplayerapp;
+package com.my.samplemusicplayertest.ui.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.musicplayerapp.model.Recommended;
+import com.my.samplemusicplayertest.R;
 
 import java.util.List;
 
